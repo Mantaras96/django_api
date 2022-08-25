@@ -20,3 +20,14 @@ docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
 Crear database (SQL).
 Create database djnago_api;
 
+------------ Crear usuario panel administracion -------
+python manage.py createsuperuser
+python manage.py runstart <-- Iniciar servidor puerto 800
+--- Necesitamos tener el mysql instalado y iniciado ---
+mysql.server start
+
+--- Agregar modelos a nuestra BBDD-----
+python manage.py makemigrations
+pyton manage.py migration
+
+
