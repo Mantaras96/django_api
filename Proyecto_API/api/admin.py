@@ -1,6 +1,9 @@
+import imp
 from django.contrib import admin
-from .models import Company
 
+from .models.languages import Languages
+from .models.user import User
+from .models.contacts import Contact
 # Register your models here.
 
-admin.site.register(Company)
+admin.site.register([User, Languages, Contact])
